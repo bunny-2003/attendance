@@ -328,6 +328,6 @@ app.post("/admin",function(req,res){
 })
 const port = process.env.PORT || 3000;
 
-app.listen(3000,function(){
+app.listen(port,function(){
     console.log("Server Started");
 })
