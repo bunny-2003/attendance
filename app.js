@@ -128,7 +128,7 @@ const one = new Attend({
 })
 
 app.post("/",function(req,res){
-    Attend.find({ rollno : req.body.roll},function(err,results){
+    Attend.find({ Name : req.body.name,rollno : req.body.roll},function(err,results){
         if(err){
           console.log(err);
         }else{
@@ -326,7 +326,7 @@ app.post("/admin",function(req,res){
 
     }
 })
-const port = process.env.PORT
+const port = process.env.PORT ;
 
 app.listen(port||5000,function(){
     console.log("Server Started");
