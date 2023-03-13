@@ -1,0 +1,21 @@
+<%- include("partials/header2") -%>
+
+<% con.forEach(function(element){ %>
+    <h2> Name: <%= element.Name %></h2>  
+   <h2> Roll No: :<%= element.rollno %></h2>
+   <hr>
+   <h2>Subjects </h2>
+   <h2>BDA : <b><%= element.Subjects.BDA.Absent%> / <%= element.Subjects.BDA.Total %></b></h2>
+   <h2>CNS : <b><%= element.Subjects.CNS.Absent%> / <%= element.Subjects.CNS.Total %> </b>  </h2>
+   <h2>NP :    <b><%= element.Subjects.NP.Absent%> / <%= element.Subjects.NP.Total %> </b></h2>
+   <h2>ES :    <b><%= element.Subjects.ES.Absent%> / <%= element.Subjects.ES.Total %> </b></h2>
+   <h2>NLP :    <b><%= element.Subjects.NLP.Absent%> / <%= element.Subjects.NLP.Total %> </b></h2>
+   <h2>ML :    <b><%= element.Subjects.ML.Absent%> / <%= element.Subjects.ML.Total %> </b></h2>
+   <h2>BDA_Lab :    <b><%= element.Subjects.BDA_Lab.Absent%> / <%= element.Subjects.BDA_Lab.Total %> </b></h2>
+   <h2>MLP_Lab :    <b><%= element.Subjects.MLP_Lab.Absent%> / <%= element.Subjects.MLP_Lab.Total %> </b></h2>
+   <h2>MST_Lab :    <b><%= element.Subjects.MST_Lab.Absent%> / <%= element.Subjects.MST_Lab.Total %> </b></h2>
+   <h2>CNS_Lab :    <b><%= element.Subjects.CNS_Lab.Absent%> / <%= element.Subjects.CNS_Lab.Total %> </b></h2>
+<% }) %>
+
+
+<%- include("partials/footer") -%>
