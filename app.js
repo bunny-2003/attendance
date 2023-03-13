@@ -135,6 +135,8 @@ app.post("/",function(req,res){
             if(results.length){
                 res.render("attendance" , {con : results});
             }else{
+                console.log(req.body.name);
+                console.log(req.body.roll);
                 res.redirect("/");
             }
         }
