@@ -128,14 +128,13 @@ const one = new Attend({
 })
 
 app.post("/",function(req,res){
-    Attend.find({ Name : req.body.name,rollno : req.body.roll},function(err,results){
+    Attend.find({rollno : req.body.roll},function(err,results){
         if(err){
           console.log(err);
         }else{
             if(results.length){
                 res.render("attendance" , {con : results});
             }else{
-                console.log(req.body.name);
                 console.log(req.body.roll);
                 res.redirect("/");
             }
